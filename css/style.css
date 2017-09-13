@@ -11,6 +11,44 @@
 /* Scrolling CSS */
 @import 'scrolling/main.css';
 
+/* Font Kit Generate */
+/* Light Fonts */
+@font-face {
+    font-family: 'helvetica_lightregular';
+    src: url('../fonts/helvetica/helvetica-light-webfont.eot');
+    src: url('../fonts/helvetica/helvetica-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetica/helvetica-light-webfont.woff2') format('woff2'),
+         url('../fonts/helvetica/helvetica-light-webfont.woff') format('woff'),
+         url('../fonts/helvetica/helvetica-light-webfont.ttf') format('truetype'),
+         url('../fonts/helvetica/helvetica-light-webfont.svg#helvetica_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Regular Fonts */
+@font-face {
+    font-family: 'helveticaregular';
+    src: url('../fonts/helvetica/helvetica-webfont.eot');
+    src: url('../fonts/helvetica/helvetica-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetica/helvetica-webfont.woff2') format('woff2'),
+         url('../fonts/helvetica/helvetica-webfont.woff') format('woff'),
+         url('../fonts/helvetica/helvetica-webfont.ttf') format('truetype'),
+         url('../fonts/helvetica/helvetica-webfont.svg#helveticaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Bold Fonts */
+@font-face {
+    font-family: 'helveticabold';
+    src: url('../fonts/helvetica/helvetica-bold-webfont.eot');
+    src: url('../fonts/helvetica/helvetica-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetica/helvetica-bold-webfont.woff2') format('woff2'),
+         url('../fonts/helvetica/helvetica-bold-webfont.woff') format('woff'),
+         url('../fonts/helvetica/helvetica-bold-webfont.ttf') format('truetype'),
+         url('../fonts/helvetica/helvetica-bold-webfont.svg#helveticabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* CSS Document */
 /*********************************************************************************************
 CSS, HTML and Design Files are all Copyright 2017-2018.
@@ -32,8 +70,9 @@ input[type="number"],
 input[type="password"],
 input[type="date"],
 select {
-	font-family: 'Oswald', sans-serif;
-	font-weight: 400;
+	font-family: 'helvetica_lightregular';
+	font-weight: normal;
+	font-style: normal;
     width: 100%;
     padding: 15px;
     margin: 5px 0;
@@ -69,14 +108,19 @@ textarea {
     margin: 0;
     white-space: inherit;
 }
+.btn-link a ,
 .btn.link a {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 700;
     display: inline-block;
     font-size: 16px;
+	text-transform: uppercase;
 }
 .btn a,
 input[type="submit"] {
-	font-family: 'Oswald', sans-serif; 
-	font-weight: 700;
+	font-family: 'helveticabold';
+	font-weight: normal;
+	font-style: normal;
     cursor: pointer;
     display: inline-block;
     padding: 12px 40px;
@@ -113,9 +157,11 @@ input[type="submit"]:hover{
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Button  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  */
 /* Typography */
 p {
+	font-family: 'helveticaregular';
+	font-weight: normal;
+    font-style: normal;
     font-size: 16px;
     line-height: 24px;
-	font-weight: 300;
 	color: #333333;
     padding: 10px 0;
 }
@@ -200,6 +246,11 @@ body {
 b,
 strong {
 	font-weight: 700;
+}
+ul li {
+	font-family: 'helveticaregular';
+	font-weight: normal;
+	font-style: normal;
 }
 .sections{
 	padding-top: 50px;
@@ -318,6 +369,7 @@ ul.slimmenu li.active ul li a{
 	color: #ffffff;
 }
 .main-menu ul li a {
+	font-family: 'Oswald', sans-serif;
 	font-weight: 400;
 	color: #bd3934;
 	text-transform: uppercase;
@@ -520,13 +572,22 @@ ul.slimmenu li.has-submenu:hover i{
 }
 
 #exTab2 .tab-content p {
+	font-family: 'helvetica_lightregular';
+	font-weight: normal;
+	font-style: normal;
 	font-size: 30px;
 	line-height: 40px;
 }
-
+#exTab2 .tab-content p span {
+	font-family: 'helveticabold';
+	font-weight: normal;
+	font-style: normal;
+}
 .stratos-methodology {
 	position: relative;
 	overflow: hidden;
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 .overlay-dark {
 	position: absolute;
@@ -573,6 +634,10 @@ ul.slimmenu li.has-submenu:hover i{
 	margin-bottom: 15px;
 }
 .stratos-methodology ul li {
+	font-family: 'helveticabold';
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
 	font-size: 24px;
 	line-height: 25px;
 	color: #98deed;
@@ -598,6 +663,10 @@ ul.slimmenu li.has-submenu:hover i{
 	color: #c43c32;
 	text-align: center;
 }
+.techniques p {
+	font-size: 18px;
+	line-height: 26px;
+}
 .techniques h2 {
 	font-size: 50px;
 	line-height: 55px;
@@ -605,6 +674,13 @@ ul.slimmenu li.has-submenu:hover i{
 }
 .techniques .btn-link a {
 	color: #ffffff;
+	font-size: 18px;
+}
+.techniques .btn-link {
+	display: none;
+}
+.techniques ul li.active .btn-link{
+	display: block;
 }
 .techniques .btn-link a:hover {
 	color: #bd3934;
@@ -618,7 +694,7 @@ ul.slimmenu li.has-submenu:hover i{
 	padding-bottom: 300px;
 }
 .brand-contain {
-	min-height: 360px;
+	min-height: 460px;
 }
 .techniques .col-sm-12.active {
 	opacity: 1 !important;
@@ -676,6 +752,9 @@ ul.slimmenu li.has-submenu:hover i{
 	color: #666666;
 	border: none;
 }
+.contact-form input[type="submit"] {
+	width: 100%;
+}
 .phone-number {
 	text-align: center;
 	padding-top: 30px;
@@ -722,6 +801,28 @@ ul.slimmenu li.has-submenu:hover i{
 	.stratos-methodology h2 {
 		font-size: 60px;
 		line-height: 60px;
+	}
+	.stratos-methodology {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.stratos-methodology p {
+		font-size: 16px;
+		line-height: 24px;
+		max-width: 600px;
+	}
+	.stratos-methodology ul {
+		max-width: 600px;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.stratos-methodology ul li {
+		font-size: 18px;
+		line-height: 26px;
+	}
+	.techniques p {
+		font-size: 16px;
+		line-height: 24px;
 	}
 }
 @media(max-width: 1100px){  }
@@ -783,7 +884,7 @@ ul.slimmenu li.has-submenu:hover i{
 		line-height: 45px;
 	}
 	.brand-contain {
-		min-height: 460px;
+		min-height: 530px;
 	}
 }
 @media(max-width: 767px){
@@ -885,6 +986,16 @@ ul.slimmenu li.has-submenu:hover i{
 		padding-left: 45%;
    		padding-top: 100px;
 		text-align: left;
+	}
+	.affix .logo a,
+	.logo a {
+		max-width: 230px;
+		width: 100%;
+		display: inline-block;
+	}
+	.main-menu,
+	.affix .main-menu {
+		padding-top: 10px;
 	}
 }
 @media(max-width: 380px){  }
