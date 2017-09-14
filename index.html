@@ -21,7 +21,7 @@
       <![endif]-->
 </head>
 
-<body>
+<body id="top">
 
 <div class="wrapper">
 
@@ -36,15 +36,13 @@
              
 	         <!-- Slim Menu -->
              <div class="main-menu pull-right">
-             
                 <ul class="slimmenu">                    
-                    <li><a href="#">Stratos Methodology </a></li>
-                    <li><a id="branding" href="#techniques">Branding</a></li>
-                    <li><a id="campaign" href="#techniques">Integrated Campaigns</a></li>
-                    <li><a id="social" href="#techniques">Social Media</a></li>
-                    <li><a href="#">Contact Us </a></li>
-                </ul>
-                
+                    <li><a class="scroll-link" data-id="top" href="#top">Stratos Methodology </a></li>
+                    <li><a class="scroll-link" id="branding" data-id="techniques" href="#techniques">Branding</a></li>
+                    <li><a class="scroll-link" id="campaign" data-id="techniques" href="#techniques">Integrated Campaigns</a></li>
+                    <li><a class="scroll-link" id="social" data-id="techniques" href="#techniques">Social Media</a></li>
+                    <li><a class="scroll-link" data-id="contactus" href="#contactus">Contact Us</a></li>
+                </ul>                
              </div>
             <!-- End Slim Menu -->
         </div>
@@ -165,7 +163,7 @@ You won’t find another agency that can match our combination of deep experienc
 	        	<h2> Integrated Campaigns</h2>
     	        <p>Smart strategy, compelling creative and efficient, well-planned media. These are the cornerstones of every Northlich campaign. We help you cut through the clutter in the look-alike healthcare marketplace and reach the right people, in the right place, at the right time.</p>
         	    <p>Case Study: Ohio State University Wexner Medical Center increases ad recall by 18.9% in three months. </p>
-            	<div class="btn-link"><a href="#">Read More</a></div>
+            	<div class="btn-link"><a href="integrated_campaigns.html">Read More</a></div>
             </div>
             <div class="image-box"><img src="images/integrated.jpg" alt="Branding Image"></div>
         </div>
@@ -191,10 +189,7 @@ You won’t find another agency that can match our combination of deep experienc
 </div>
 </section>        
         
-
-
-
-<section class="contact-section sections mar-btm-4" data-parallax="scroll" data-image-src="images/contact-home-banner.jpg">
+<section id="contactus" class="contact-section sections mar-btm-4" data-parallax="scroll" data-image-src="images/contact-home-banner.jpg">
 <div class="container">
 	<div class="row">
     	
@@ -204,12 +199,12 @@ You won’t find another agency that can match our combination of deep experienc
         </div>
         
         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 contact-form wow fadeInUp">
-        	<form>
-	        	<div class="col-sm-6"><input type="text" placeholder="Name*" required></div>
-                <div class="col-sm-6"><input type="email" placeholder="Email Address*" required></div>
-                <div class="col-sm-6"><input type="text" placeholder="Title*" required></div>
-                <div class="col-sm-6"><input type="text" placeholder="Organization*" required></div>
-                <div class="col-sm-12"> <input class="btn-block" type="submit" value="Submit" ></div>
+        	<form method="post" action="contact_process.php">
+	        	<div class="col-sm-6"><input type="text" placeholder="Name*" name="yourname" required></div>
+                <div class="col-sm-6"><input type="email" placeholder="Email Address*" name="youremail" required></div>
+                <div class="col-sm-6"><input type="text" placeholder="Title*" name="title" required></div>
+                <div class="col-sm-6"><input type="text" placeholder="Organization*" name="organization" required></div>
+                <div class="col-sm-12"> <input class="btn-block" type="submit" name="submit" value="Submit" ></div>
             </form>
         </div>
         
@@ -269,16 +264,8 @@ You won’t find another agency that can match our combination of deep experienc
     <script src="js/scrolling/scrolling-pgs.js" type="text/javascript"></script>
     <script src="js/scrolling/sly.min.js" type="text/javascript"></script>
 
-<script>
-$(document).ready(function() {
-$('.slimmenu li a').on('click', function(event){
-		event.preventDefault();
-		var sectionID1 = $(this).attr("id");
-		$("#example li").not("#" + sectionID1).removeClass( "active" );
-		$("#example").find('li[id="'+sectionID1+'"]').addClass( "active" );
-	});
-});
-</script>
+
+
 <script type="text/javascript">
 $(document).ready(function() {
 	// navigation click actions	
@@ -297,5 +284,14 @@ function scrollToID(id, speed){
 }
 </script>
 
+<script>
+$(document).ready(function() {
+$('.slimmenu li a').on('click', function(){
+		var sectionID1 = $(this).attr("id");
+		$("#example li").not("#" + sectionID1).removeClass( "active" );
+		$("#example").find('li[id="'+sectionID1+'"]').addClass( "active" );
+	});
+});
+</script>
 </body>
 </html>

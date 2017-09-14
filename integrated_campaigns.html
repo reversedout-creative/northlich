@@ -36,14 +36,15 @@
              
 	         <!-- Slim Menu -->
              <div class="main-menu pull-right">
-             
-                <ul class="slimmenu">                    
-                    <li><a href="#">Stratos Methodology </a></li>
+                 
+                    
+                 <ul class="slimmenu">                                        
+                    <li><a href="index.html">Stratos Methodology </a></li>
                     <li><a id="branding" href="index.html#techniques">Branding</a></li>
                     <li><a id="campaign" href="index.html#techniques">Integrated Campaigns</a></li>
                     <li><a id="social" href="index.html#techniques">Social Media</a></li>
-                    <li><a href="#">Contact Us </a></li>
-                </ul>
+                 	<li><a class="scroll-link" data-id="contactus" href="#contactus">Contact Us</a></li>
+                 </ul>
                 
              </div>
             <!-- End Slim Menu -->
@@ -177,8 +178,38 @@
 </section>
 <!-- End Solution Blurb -->
 
+<!-- Web application -->
+<section class="sections webapplication text-center">
+<div class="container">
+	<div class="row">
+    	<div class="col-sm-12">
+        	<h2 class="wow fadeInLeft">Web application</h2>
+            <div class="web-application-image mrtop40 wow fadeInUp">
+            	<img src="images/web-application.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- End Web application -->
 
-<section class="contact-section sections mar-btm-4" data-parallax="scroll" data-image-src="images/contact-home-banner.jpg">
+<!-- TV/Web Video application -->
+<section class="sections videoapplication text-center">
+<div class="container">
+	<div class="row">
+    	<div class="col-sm-12">
+        	<h2 class="wow fadeInRight">TV/Web Video application</h2>
+            <div class="videoapplication-video mrtop40 wow fadeInUp">
+            	<img src="images/video-image.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- End TV/Web Video application -->
+
+<!-- Contact Form -->
+<section id="contactus" class="contact-section sections mar-btm-4" data-parallax="scroll" data-image-src="images/contact-home-banner.jpg">
 <div class="container">
 	<div class="row">
     	
@@ -188,12 +219,12 @@
         </div>
         
         <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 contact-form wow fadeInUp">
-        	<form>
-	        	<div class="col-sm-6"><input type="text" placeholder="Name*" required></div>
-                <div class="col-sm-6"><input type="email" placeholder="Email Address*" required></div>
-                <div class="col-sm-6"><input type="text" placeholder="Title*" required></div>
-                <div class="col-sm-6"><input type="text" placeholder="Organization*" required></div>
-                <div class="col-sm-12"> <input class="btn-block" type="submit" value="Submit" ></div>
+        	<form method="post" action="contact_process.php">
+	        	<div class="col-sm-6"><input type="text" placeholder="Name*" name="yourname" required></div>
+                <div class="col-sm-6"><input type="email" placeholder="Email Address*" name="youremail" required></div>
+                <div class="col-sm-6"><input type="text" placeholder="Title*" name="title" required></div>
+                <div class="col-sm-6"><input type="text" placeholder="Organization*" name="organization" required></div>
+                <div class="col-sm-12"> <input class="btn-block" type="submit" name="submit" value="Submit" ></div>
             </form>
         </div>
         
@@ -246,12 +277,6 @@
     <script src="js/wow.min.js" type="text/javascript"></script>
     <!-- Custom Script -->
     <script src="js/custom.js" type="text/javascript"></script>
-    
-    <!-- Scrolling JS
-    <script src="js/scrolling/main.js" type="text/javascript"></script>
-    <script src="js/scrolling/scrolling.js" type="text/javascript"></script>
-    <script src="js/scrolling/scrolling-pgs.js" type="text/javascript"></script>
-    <script src="js/scrolling/sly.min.js" type="text/javascript"></script> -->
 
 	<script type="text/javascript">
     $(document).ready(function() {
