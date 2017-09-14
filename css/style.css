@@ -903,6 +903,9 @@ header.innner-menu #mainNav.affix {
 		font-size: 40px;
 		line-height: 45px;
 	}
+	.techniques .btn-link {
+		display: block;
+	}
 	.brand-contain {
 		min-height: 530px;
 	}
@@ -1402,6 +1405,9 @@ header.innner-menu #mainNav.affix {
 	}
 	.case-tab-contain::before {
 		right: 26%;
+	}
+	.case-summary .nav.nav-tabs li a {
+		padding: 10px 50px;
 	}
 	/**/
 	/**/
