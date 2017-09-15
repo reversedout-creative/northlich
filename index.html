@@ -53,6 +53,10 @@
 <!-- Banner -->   
 
 <section class="hero-banner sections banner-height" data-parallax="scroll" data-image-src="images/hero-banner.jpg">
+<div id="airplane-inner">
+	<svg version="1.1" id="svg_airplane" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="80%" viewBox="0 0 1164.86 450" enable-background="new 0 0 1164.86 450" xml:space="preserve"></svg>
+</div>
+<div class="girl-image"><img src="images/girl-image.png" alt="Girl Image"></div>
 <div class="container">
 	<div class="row">
     	<div class="col-xs-12 text-center wow fadeInUp">
@@ -293,5 +297,113 @@ $('.slimmenu li a').on('click', function(){
 	});
 });
 </script>
+<!-- Plane Animation  -->
+ <script src="https://oss.maxcdn.com/libs/snapsvg/0.1.0/snap.svg-min.js"></script>
+<script>
+jQuery(document).ready(function(){
+  var snapC = Snap("#svg_airplane"); 
+  // SVG C - "Squiggly" Path  
+  var myPathB = snapC.path("M1.359,22.614C41.607,5.647,86.333,2.162,129.976,3.903c192.705,7.69,367.931,111.304,523.181,225.722 c73.13,53.896,147.734,112.606,237.015,129.392c46.868,8.811,95.835,5.297,141.383-8.83 c49.294-15.289,94.682-43.001,130.804-79.864").attr({
+    id: "airplane-path",
+    fill: "none",
+    strokeWidth: "8",
+    stroke: "#736a60", // Line Color
+	opacity: "0.5",
+    strokeMiterLimit: "10",
+    strokeDasharray: "8 8 8 8",
+    strokeDashOffset: "180"
+  });
+  var myPathC = snapC.path("M1.359,22.614C41.607,5.647,86.333,2.162,129.976,3.903c192.705,7.69,367.931,111.304,523.181,225.722 c73.13,53.896,147.734,112.606,237.015,129.392c46.868,8.811,95.835,5.297,141.383-8.83 c49.294-15.289,94.682-43.001,130.804-79.864").attr({
+    id: "airplane-path",
+    fill: "none",
+    strokeWidth: "12",
+    stroke: "#b0c5da",
+	opacity: "0",
+    strokeMiterLimit: "10",
+    strokeDasharray: "10 10 10 10",
+    strokeDashOffset: "180"
+  });
+
+  // SVG C - Triangle (As Polyline)
+  var PlaneOne = snapC.polyline("257.867,105.353 33.112,3.926 60.13,62.228");
+  PlaneOne.attr({
+    fill: "#bd3934"
+  })
+  
+  var PlaneTwo = snapC.polyline("60.13,62.228 23.57,113.588 257.867,105.353");
+  PlaneTwo.attr({
+    fill: "#ab2f2a"
+  })
+  var PlaneThree = snapC.polyline("23.57,113.588 89.553,112.285 75.637,94.13");
+  PlaneThree.attr({
+    fill: "#bd3934"
+  })
+  var PlaneFour = snapC.polyline("75.637,94.129 104.396,156.229 257.867,105.353");
+  PlaneFour.attr({
+    fill: "#bd3934"
+  })
+  var Plane = snapC.g(PlaneOne, PlaneTwo, PlaneThree, PlaneFour);
+  Plane.attr({
+    id: "airplane"
+  });
+  
+  initPlane();
+  
+  // Initialize Plane on Path
+  function initPlane(){
+    var planeGroup = snapC.g( Plane ); // Group polyline 
+    movePoint = myPathC.getPointAtLength(length);
+    planeGroup.transform( 't' + parseInt(movePoint.x - 80) + ',' + parseInt( movePoint.y - 80) + 'r' + (movePoint.alpha - 180));
+  }
+  
+  // SVG C - Draw Path
+  var lenC = myPathC.getTotalLength();
+
+  // SVG C - Animate Path
+  function animateSVG() {
+    
+    myPathC.attr({
+      stroke: '#f3f5f6',
+      strokeWidth: 12,
+      fill: 'none',
+      // Draw Path
+      "stroke-dasharray": lenC + ' ' + lenC,
+      "stroke-dashoffset": lenC + lenC
+    }).animate({"stroke-dashoffset": lenC}, 2000,mina.easeinout);
+    
+    var planeGroup = snapC.g( Plane ); // Group polyline
+
+    setTimeout( function() {
+      Snap.animate(0, lenC, function( value ) {
+   
+        movePoint = myPathC.getPointAtLength( value );
+      
+        planeGroup.transform( 't' + parseInt(movePoint.x - 180) + ',' + parseInt( movePoint.y - 100) + 'r' + (movePoint.alpha - 180));
+    
+      }, 2000,mina.easeinout, function(){
+        alertEnd();
+      });
+    });
+    
+  }
+  
+  // Callback Function
+  function alertEnd(){
+    // Enable Button
+    $('#nin').removeAttr('disabled');
+  }
+  // Animate Button
+  function kapow(){
+        $( document ).ready(function() {
+      // Run SVG
+      animateSVG();     
+    });
+  }
+
+  kapow();
+
+});
+</script>
+
 </body>
 </html>

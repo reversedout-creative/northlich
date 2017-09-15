@@ -532,6 +532,26 @@ header.innner-menu #mainNav.affix {
 	margin: 0 auto;
 	z-index: 10;
 }
+#svg_airplane {
+	position: absolute;
+	top: 25%;
+	width: 50%;
+	overflow: visible;
+	    -ms-transform: rotate(-15deg); /* IE 9 */
+    -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+    transform: rotate(-15deg);
+}
+
+.girl-image {
+	position: absolute;
+	bottom:0;
+	left:0;
+	right: 0;
+	max-width: 1140px;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+}
 
 
 #Elevate {
@@ -743,11 +763,6 @@ header.innner-menu #mainNav.affix {
          -o-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
 }
-
-
-
-
-
 .contact-section h3 {
 	font-size: 16px;
 	line-height: 24px;
@@ -851,6 +866,13 @@ header.innner-menu #mainNav.affix {
 	.banner-height {
 		min-height: 500px;
 	}
+	.girl-image img{
+		max-width: 400px;
+	}
+	#svg_airplane {
+		width: 40%;
+		top: 200px;
+	}
 	.hero-banner h1 {
 		padding-left: 330px;
    		padding-top: 180px;
@@ -924,6 +946,13 @@ header.innner-menu #mainNav.affix {
 		max-width: 200px;
 		width: 100%;
 	}
+	.girl-image img{
+		max-width: 350px;
+		padding-left: 50px;
+	}
+	#svg_airplane {
+		top: 150px;
+	}
 	
 	.life-title {
 		top: 20px;
@@ -986,7 +1015,13 @@ header.innner-menu #mainNav.affix {
    		padding-top: 100px;
 		text-align: left;
 	}
-	
+	.girl-image img{
+		max-width: 250px;
+		padding-left: 50px;
+	}
+	#svg_airplane {
+		top: 120px;
+	}	
 	.life-title {
 		font-size: 80px;
 		line-height: 80px;
@@ -1019,6 +1054,14 @@ header.innner-menu #mainNav.affix {
 	.main-menu,
 	.affix .main-menu {
 		padding-top: 10px;
+	}
+	.girl-image img{
+		max-width: 200px;
+		padding-left: 0px;
+	}
+	#svg_airplane {
+		top: 100px;
+		width: 50%;
 	}
 }
 @media(max-width: 380px){  }
@@ -1650,3 +1693,6 @@ header.innner-menu #mainNav.affix {
 		max-width: 50px;
 	}
 }
+
+
+
