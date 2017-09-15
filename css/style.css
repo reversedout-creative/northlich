@@ -1132,6 +1132,9 @@ header.innner-menu #mainNav.affix {
 	display: inline-block;
 	z-index: 10;
 }
+.case-dlt {
+	height: 453px;
+}
 .case-dlt .tab-pane .tab-title h2 {
 	position: relative;
 	z-index: 10;
@@ -1140,7 +1143,8 @@ header.innner-menu #mainNav.affix {
 }
 .case-tab-contain {
 	position: relative;
-	padding: 30px 10px 100px 15px;
+	padding: 30px 10px 15px 15px;
+	min-height: 320px;
 }
 .case-tab-contain h3 {
 	font-size: 30px;
@@ -1165,7 +1169,7 @@ header.innner-menu #mainNav.affix {
 .case-tab-contain p {
 	position: relative;
 	z-index: 10;
-	max-width: 500px;
+	max-width: 550px;
 }
 .red-bg {
 	background: #bd3934;
@@ -1179,7 +1183,7 @@ header.innner-menu #mainNav.affix {
 	bottom: 0;
 	z-index: 10;
 	
-    border-bottom: 700px solid rgba(0, 0, 0, 0);
+    border-bottom: 850px solid rgba(0, 0, 0, 0);
     border-right: 400px solid #98deed;
     border-top: 0 solid rgba(0, 0, 0, 0);
 }
@@ -1192,8 +1196,7 @@ header.innner-menu #mainNav.affix {
 	
 	border-bottom: 0px solid rgba(0, 0, 0, 0);
     border-left: 400px solid #98deed;
-    border-top: 700px solid rgba(0, 0, 0, 0);
-	
+    border-top: 850px solid rgba(0, 0, 0, 0);	
 }
 .result-section p {
 	max-width: 650px;
@@ -1217,6 +1220,20 @@ header.innner-menu #mainNav.affix {
 	line-height: 85px;
 	letter-spacing: -2px;
 	color: #98deed;
+}
+.result-section h4 {
+	font-size: 28px;
+	line-height: 34px;
+	padding-bottom: 0;
+}
+.result-section ul {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.result-section ul li {
+	display: block;
+	font-size: 18px;
+	line-height: 26px;
 }
 
 /**/
@@ -1260,6 +1277,12 @@ header.innner-menu #mainNav.affix {
 /**/
 .print-applicaitons {
 	padding-bottom: 10px;
+}
+.print-applicaitons h3 {
+	font-size: 20px;
+	padding-top: 0;
+	color: #776E63;
+	padding-bottom: 20px;
 }
 .print-applicaitons .container,
 .print-applicaitons .container .row {
@@ -1347,6 +1370,20 @@ header.innner-menu #mainNav.affix {
 }
 .webapplication {
 	padding-bottom: 0;
+}
+
+.no-padding .container,
+.no-padding .container .row {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	max-width: 100%;
+}
+.social-images img {
+	width: 100%;
+}
+.social-images .col-sm-3 {
+	padding: 5px;
 }
 
 
@@ -1494,6 +1531,10 @@ header.innner-menu #mainNav.affix {
 	.case-tab-contain::before {
 		right: 24%;
 	}
+	.case-tab-contain h3,
+	.case-tab-contain p {
+		max-width: 500px;
+	}
 	/**/
 	.the-insight:before {
 		height: 100px;
@@ -1540,6 +1581,12 @@ header.innner-menu #mainNav.affix {
 		display: none;
 		transform:skewX(0deg);
 		background: none;
+	}
+	.case-dlt {
+		height: inherit;
+	}
+	.case-tab-contain {
+		min-height: inherit;
 	}
 	/**/
 	.the-insight:before {
