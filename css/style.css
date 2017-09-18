@@ -195,7 +195,7 @@ h3{
 h4{
 	font-size: 20px;
 	line-height: 30px;
-	padding:10px 0;
+	padding:15px 0;
 }
 h5{
 	font-size: 24px;
@@ -716,6 +716,7 @@ header.innner-menu #mainNav.affix {
 }
 .techniques ul li.active .btn-link{
 	display: block;
+	padding: 7px 0px;
 }
 .techniques .btn-link a:hover {
 	color: #bd3934;
@@ -791,7 +792,8 @@ header.innner-menu #mainNav.affix {
 	padding-top: 30px;
 	padding-bottom: 20px;
 }
-.phone-number a {
+.phone-number a, 
+.phone-number p {
 	font-size: 36px;
 	line-height: 45px;
 	text-align: center;
@@ -809,7 +811,7 @@ header.innner-menu #mainNav.affix {
 	display: inline-block;
 	vertical-align: top;
 	padding: 10px 20px;
-	text-align: center;
+	text-align: left;
 	font-weight: 400;
 	color: #776e63;
 	line-height: 26px;
@@ -995,7 +997,7 @@ header.innner-menu #mainNav.affix {
 	.techniques .col-sm-12 {
 		opacity: 1 !important;
 	}
-	/* Scrilling Box */
+	/* Scrolling Box */
 	.example .frame ul li {
 		float: none;
 		display: block;
@@ -1263,6 +1265,7 @@ header.innner-menu #mainNav.affix {
 	line-height: 85px;
 	letter-spacing: -2px;
 	color: #98deed;
+	padding-bottom: 10px;
 }
 .result-section h4 {
 	font-size: 28px;
@@ -1318,52 +1321,52 @@ header.innner-menu #mainNav.affix {
 }
 
 /**/
-.print-applicaitons {
-	padding-bottom: 10px;
+.print-applications {
+padding-bottom: 10px;
 }
-.print-applicaitons h3 {
+.print-applications h3 {
 	font-size: 20px;
 	padding-top: 0;
 	color: #776E63;
 	padding-bottom: 20px;
 }
-.print-applicaitons .container,
-.print-applicaitons .container .row {
+.print-applications .container,
+.print-applications .container .row {
 	width: 100%;
 	max-width: 100%;
 	padding: 0;
 	margin: 0;
 }
-.print-applicaitons .col-sm-4 {
+.print-applications .col-sm-4 {
 	padding: 5px;
 	overflow: hidden;
 }
-.print-applicaitons .col-sm-4 img:hover {
+.print-applications .col-sm-4 img:hover {
 	-webkit-transform: scale(1.10);
 	   -moz-transform: scale(1.10);
 		 -o-transform: scale(1.10);
 	    	transform: scale(1.10);
 			opacity: 0.8;
 }
-.print-applicaitons .col-sm-4 img,
-.print-applicaitons .col-sm-4 img:hover {
+.print-applications .col-sm-4 img,
+.print-applications .col-sm-4 img:hover {
 	-webkit-transition: all 0.5s ease-in-out;
        -moz-transition: all 0.5s ease-in-out;
          -o-transition: all 0.5s ease-in-out;
             transition: all 0.5s ease-in-out;
 }
 
-.print-applicaitons .col-sm-4:first-child {
+.print-applications .col-sm-4:first-child {
 	padding-left: 0;
 }
-.print-applicaitons .col-sm-4:last-child {
+.print-applications .col-sm-4:last-child {
 	padding-right: 0;
 }
-.print-applicaitons h2 {
+.print-applications h2 {
 	padding-bottom: 20px;
 	color: #9d2134;
 }
-.print-applicaitons img {
+.print-applications img {
 	width: 100%;
 }
 /**/

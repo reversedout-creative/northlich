@@ -63,3 +63,15 @@
 	
 
 })(jQuery);
+
+function brandingClick(){
+	location.href = 'branding.html';
+}
+
+function campaignsClick(){
+	location.href = 'integrated_campaigns.html';
+}
+
+function socialClick() {
+	location.href = 'social_media.html';
+}
