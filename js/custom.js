@@ -64,14 +64,16 @@
 
 })(jQuery);
 
-function brandingClick(){
+/*
+function brandingClick() {
 	location.href = 'branding.html';
 }
 
-function campaignsClick(){
+function campaignsClick() {
 	location.href = 'integrated_campaigns.html';
 }
 
 function socialClick() {
 	location.href = 'social_media.html';
 }
+*/
