@@ -41,7 +41,7 @@
 
                             <ul class="slimmenu">
                                 <li><a href="index.html#stratos-methodology">Stratos Methodology</a></li>
-                                <li><a id="branding" href="index.html#techniques">Branding</a></li>
+                                <li><a id="branding" href="#">Branding</a></li>
                                 <li><a id="campaign" href="index.html#techniques">Integrated Campaigns</a></li>
                                 <li><a id="social" href="index.html#techniques">Social Media</a></li>
                                 <li><a class="scroll-link" data-id="contactus" href="#contactus">Contact Us</a></li>
@@ -308,7 +308,8 @@
 
     <script>
         $('#branding').click(function() {
-            window.localStorage.setItem('myInfo', 'Hello!');
+            localStorage.setItem('myInfo', 'Hello!');
+            console.log(localStorage.getItem('myInfo'));
         });
     </script>
 
