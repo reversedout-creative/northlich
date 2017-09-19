@@ -417,9 +417,12 @@
     </script>
 
     <script>
-        if (document.referrer == "https://adamkoehler.github.io/northlich/integrated_campaigns.html"){
-            alert('IT WORKED!');
+        function test(){
+            if (document.referrer == "https://adamkoehler.github.io/northlich/integrated_campaigns.html"){
+                alert('IT WORKED!');
+            }
         }
+        window.onload = test;
     </script>
 
 </body>
