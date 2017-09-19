@@ -306,7 +306,7 @@
             });
         });
     </script>
-    
+
     <!-- Plane Animation  -->
     <script src="https://oss.maxcdn.com/libs/snapsvg/0.1.0/snap.svg-min.js"></script>
 
@@ -419,6 +419,15 @@
     </script>
 
     <script>
+        function load(){
+            var getData = window.localStorage.getItem('myInfo');
+            alert(getData);
+        }
+        window.onload = load;
+    </script>
+
+<!--
+    <script>
         function campaignCheck(){
             var site = document.referrer;
             var search = "integrated_campaigns.html";
@@ -443,6 +452,7 @@
         }
         window.onload = campaignCheck;
     </script>
+-->
 
 </body>
 
