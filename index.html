@@ -418,8 +418,13 @@
 
     <script>
         function test(){
-            if (document.referrer == "https://adamkoehler.github.io/northlich/integrated_campaigns.html"){
+            var site = document.referrer;
+            var search = "integrated_campaigns.html";
+
+            if (site.indexOf(search) > -1){
                 alert('IT WORKED!');
+            }else{
+                alert('It didnt work.. :(');
             }
         }
         window.onload = test;
