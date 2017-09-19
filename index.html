@@ -306,8 +306,10 @@
             });
         });
     </script>
+    
     <!-- Plane Animation  -->
     <script src="https://oss.maxcdn.com/libs/snapsvg/0.1.0/snap.svg-min.js"></script>
+
     <script>
         jQuery(document).ready(function() {
             var snapC = Snap("#svg_airplane");
@@ -417,19 +419,29 @@
     </script>
 
     <script>
-        function test(){
+        function campaignCheck(){
             var site = document.referrer;
             var search = "integrated_campaigns.html";
 
             if (site.indexOf(search) > -1){
                 $('#techniques #branding').removeClass('active');
                 $('#techniques #campaign').addClass('active');
-                //document.getElementById('branding').removeClass('active');
-            }else{
-                alert('It didnt work.. :(');
             }
         }
-        window.onload = test;
+        window.onload = campaignCheck;
+    </script>
+
+    <script>
+        function socialMediaCheck() {
+            var site = document.referrer;
+            var search = "social_media.html";
+
+            if (site.indexOf(search) > -1) {
+                $('#techniques #branding').removeClass('active');
+                $('#techniques #social').addClass('active');
+            }
+        }
+        window.onload = campaignCheck;
     </script>
 
 </body>
