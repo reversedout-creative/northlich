@@ -602,7 +602,7 @@ ul.slimmenu li.active ul li a {
 }
 
 ul.slimmenu li {
-    letter-spacing: 0.75px;
+    letter-spacing: 0.5px;
 }
 
 
@@ -1434,7 +1434,7 @@ header.innner-menu #mainNav.affix {
     position: relative;
     overflow: hidden;
     min-height: 80px;
-    letter-spacing: 0.75px;
+    letter-spacing: 0.7 5px;
 }
 
 .case-summary .nav.nav-tabs li a:hover:before,
