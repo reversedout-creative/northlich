@@ -59,8 +59,13 @@
     wow.init();
 	
 	/* END WOW */
-	
-	
+	/*
+	$('.slimmenu li a').on('click', function () {
+		var sectionID1 = $(this).attr("id");
+		$("#example li").not("#" + sectionID1).removeClass("active");
+		$("#example").find('li[id="' + sectionID1 + '"]').addClass("active");
+	});
+	*/
 
 })(jQuery);
 
