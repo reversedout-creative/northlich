@@ -89,9 +89,9 @@
                         <h2 class="life-title wow fadeInLeft">LIFT</h2>
                         <div id="exTab2">
                             <ul class="nav nav-tabs wow fadeInRight">
-                                <li class="active"> <a href="#1" data-toggle="tab">awareness</a></li>
-                                <li><a href="#2" data-toggle="tab">results</a></li>
-                                <li><a href="#3" data-toggle="tab">ROI</a></li>
+                                <li id="awareness" class="active"> <a href="#1" data-toggle="tab">awareness</a></li>
+                                <li id="results"><a href="#2" data-toggle="tab">results</a></li>
+                                <li id="roi"><a href="#3" data-toggle="tab">ROI</a></li>
                             </ul>
 
                             <div class="tab-content wow fadeInUp">
@@ -292,6 +292,81 @@
     </script>
 
     <script>
+        //Scrolling through elevate animation
+        $(window).scroll(example);
+
+            function example() {
+                var tempScrollTop = $(window).scrollTop();
+
+                if(tempScrollTop <= 460){
+                    $('#awareness').addClass('active');
+                    $('#1').addClass('active');
+                } else if(tempScrollTop > 460) {
+                    $('#awareness').removeClass('active');
+                    $('#1').removeClass('active');
+                }
+
+                if(tempScrollTop > 460 && tempScrollTop <= 600) {
+                    $('#results').addClass('active');
+                    $('#2').addClass('active');
+                } else if (tempScrollTop <= 460 || tempScrollTop > 600) {
+                    $('#results').removeClass('active');
+                    $('#2').removeClass('active');
+                }
+
+                if (tempScrollTop >= 600) {
+                    $('#roi').addClass('active');
+                    $('#3').addClass('active');
+                } else if (tempScrollTop < 600) {
+                    $('#roi').removeClass('active');
+                    $('#3').removeClass('active');
+                }
+            };
+    </script>
+
+    <script>
+            //Scrolling through Techniques animation
+            $(window).scroll(example);
+
+            function example() {
+                var tempScrollTop = $(window).scrollTop();
+                /*
+                console.log(tempScrollTop);
+
+                if (tempScrollTop <= 1850) {
+                    $('#branding').addClass('active');
+                } else if (tempScrollTop > 460) {
+                    $('#branding').removeClass('active');
+                }
+
+                if (tempScrollTop > 1850 && tempScrollTop <= 2050) {
+                    $('#campaign').addClass('active');
+                } else if (tempScrollTop <= 460 || tempScrollTop > 600) {
+                    $('#results').removeClass('active');
+                }
+                
+                if (tempScrollTop >= 2050) {
+                    $('#roi').addClass('active');
+                } else if (tempScrollTop < 600) {
+                    $('#roi').removeClass('active');
+                }*/
+            };
+    </script>
+
+    <script>
+        function test() {
+            if(localStorage.getItem("storageName") === "campaign") {
+                $('#branding').removeClass('active');
+                $('#campaign').addClass('active');
+            } //else if(localStorage.getItem("storageName") === "social") {
+
+            //}
+        }
+        window.onload = test;
+    </script>
+
+<!--
+    <script>
         $(document).ready(function() {
             $('.slimmenu li a').on('click', function() {
                 var sectionID1 = $(this).attr("id");
@@ -300,6 +375,7 @@
             });
         });
     </script>
+-->
 
     <!-- Plane Animation  -->
     <script src="https://oss.maxcdn.com/libs/snapsvg/0.1.0/snap.svg-min.js"></script>
@@ -411,42 +487,6 @@
 
         });
     </script>
-
-    <script>
-        function load(){
-            //console.log(localStorage.getItem('myInfo'));
-            //alert(getData);
-        }
-        window.onload = load;
-    </script>
-
-<!--
-    <script>
-        function campaignCheck(){
-            var site = document.referrer;
-            var search = "integrated_campaigns.html";
-
-            if (site.indexOf(search) > -1){
-                $('#techniques #branding').removeClass('active');
-                $('#techniques #campaign').addClass('active');
-            }
-        }
-        window.onload = campaignCheck;
-    </script>
-
-    <script>
-        function socialMediaCheck() {
-            var site = document.referrer;
-            var search = "social_media.html";
-
-            if (site.indexOf(search) > -1) {
-                $('#techniques #branding').removeClass('active');
-                $('#techniques #social').addClass('active');
-            }
-        }
-        window.onload = campaignCheck;
-    </script>
--->
 
 </body>
 
