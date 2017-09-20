@@ -601,6 +601,11 @@ ul.slimmenu li.active ul li a {
     color: #ffffff;
 }
 
+ul.slimmenu li {
+    letter-spacing: 0.75px;
+}
+
+
 .main-menu ul li a {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
@@ -909,6 +914,7 @@ header.innner-menu #mainNav.affix {
     line-height: 72px;
     color: #98deed;
     font-weight: 300;
+    letter-spacing: 2px;
 }
 
 .stratos-methodology p {
@@ -1054,10 +1060,11 @@ header.innner-menu #mainNav.affix {
     line-height: 24px;
     padding-bottom: 40px;
     padding-top: 0;
+    letter-spacing: 0.5px;
 }
 
 .contact-section h2 {
-    letter-spacing: 2px;
+    letter-spacing: 1.25px;
 }
 
 .contact-form .col-sm-12,
@@ -1400,6 +1407,10 @@ header.innner-menu #mainNav.affix {
     margin-bottom: 150px;
 }
 
+.case-summary .tab-title h2 {
+    letter-spacing: 0.5px;
+}
+
 .case-summary .nav.nav-tabs li {
     width: 33.33%;
     margin: 0;
@@ -1423,6 +1434,7 @@ header.innner-menu #mainNav.affix {
     position: relative;
     overflow: hidden;
     min-height: 80px;
+    letter-spacing: 0.75px;
 }
 
 .case-summary .nav.nav-tabs li a:hover:before,
@@ -1593,6 +1605,7 @@ header.innner-menu #mainNav.affix {
     font-size: 28px;
     line-height: 34px;
     padding-bottom: 0;
+    letter-spacing: 0.75px;
 }
 
 .result-section ul {
@@ -1717,9 +1730,8 @@ header.innner-menu #mainNav.affix {
     background: #e3e3e3;
 }
 
-.solution-blurd .custom {
-    position: relative;
-    background: #fff;
+.solution-blurd h3{
+    letter-spacing: 0.5px;
 }
 
 .solution-blurd:before {
