@@ -41,7 +41,7 @@
 
                             <ul class="slimmenu">
                                 <li><a href="index.html#stratos-methodology">Stratos Methodology</a></li>
-                                <li><a id="branding" href="#">Branding</a></li>
+                                <li><a id="branding" href="index.html#techniques">Branding</a></li>
                                 <li><a id="campaign" href="index.html#techniques">Integrated Campaigns</a></li>
                                 <li><a id="social" href="index.html#techniques">Social Media</a></li>
                                 <li><a class="scroll-link" data-id="contactus" href="#contactus">Contact Us</a></li>
@@ -306,9 +306,20 @@
     </script>
 
     <script>
+        //Stores a variable to use to change the active item in the Techniques that Lift section
+        $("#branding").click(function () {
+            var getInput = "branding";
+            localStorage.setItem("storageName", getInput);
+        });
+
         $("#campaign").click(function() {
             var getInput = "campaign";
-            localStorage.setItem("storageName",getInput);
+            localStorage.setItem("storageName", getInput);
+        });
+
+        $("#social").click(function () {
+                var getInput = "social";
+                localStorage.setItem("storageName", getInput);
         });
     </script>
 

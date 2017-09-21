@@ -255,6 +255,24 @@
         }
     </script>
 
+    <script>
+        //Stores a variable to use to change the active item in the Techniques that Lift section
+        $("#branding").click(function () {
+            var getInput = "branding";
+            localStorage.setItem("storageName", getInput);
+        });
+
+        $("#campaign").click(function () {
+            var getInput = "campaign";
+            localStorage.setItem("storageName", getInput);
+        });
+
+        $("#social").click(function () {
+            var getInput = "social";
+            localStorage.setItem("storageName", getInput);
+        });
+    </script>
+
 </body>
 
 </html>
