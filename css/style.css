@@ -1051,10 +1051,10 @@ header.innner-menu #mainNav.affix {
 .techniques .active,
 .techniques .active .image-box,
 .techniques .image-box {
-    -webkit-transition: all 0.5s ease-in-out;
-    -moz-transition: all 0.5s ease-in-out;
-    -o-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.325s ease-in-out;
+    -moz-transition: all 0.325s ease-in-out;
+    -o-transition: all 0.325s ease-in-out;
+    transition: all 0.325s ease-in-out;
 }
 
 .contact-section h3 {
