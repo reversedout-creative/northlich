@@ -835,6 +835,16 @@ header.innner-menu #mainNav.affix {
     letter-spacing: 2px;
 }
 
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    color: #cf2327;
+}
+
+.nav-tabs li a {
+    color: white;
+}
+
 #exTab2 .nav-tabs li {
     float: none;
     display: block;
@@ -855,9 +865,13 @@ header.innner-menu #mainNav.affix {
     font-weight: 300;
     font-size: 40px;
     line-height: 50px;
-    color: #ffffff;
+    /*color: #ffffff;*/
     text-transform: uppercase;
     padding: 0;
+}
+
+#exTab2 .nav-tabs li.active a.active {
+    color: #bd3934;
 }
 
 #exTab2 .nav.nav-tabs {
