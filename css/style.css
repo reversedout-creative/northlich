@@ -1,6 +1,6 @@
 /* Google fonts */
 
-@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600');
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700');
 
 /*	font-family: 'Oswald', sans-serif;     */
 
@@ -926,6 +926,7 @@ header.innner-menu #mainNav.affix {
     width: 100%;
     font-size: 18px;
     line-height: 26px;
+    padding-left: 20px;
 }
 
 .cotainbox {
@@ -962,9 +963,9 @@ header.innner-menu #mainNav.affix {
 }
 
 .stratos-methodology p strong {
-    max-width: 300px;
-    margin: 0 auto;
-    display: block;
+    max-width: 700px;
+    /*margin: 0 auto;
+    display: block;*/
 }
 
 .techniques {
@@ -1542,7 +1543,7 @@ header.innner-menu #mainNav.affix {
 .case-tab-contain p {
     position: relative;
     z-index: 10;
-    max-width: 550px;
+    max-width: 565px;
 }
 
 .red-bg {
@@ -1574,7 +1575,7 @@ header.innner-menu #mainNav.affix {
 }
 
 .result-section p {
-    max-width: 650px;
+    max-width: 655px;
     margin: 0 auto;
     width: 100%;
     font-size: 18px;
