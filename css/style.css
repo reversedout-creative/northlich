@@ -605,7 +605,6 @@ ul.slimmenu li {
     letter-spacing: 0.5px;
 }
 
-
 .main-menu ul li a {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
@@ -746,6 +745,10 @@ ul.slimmenu li.has-submenu:hover i {
 
 header.innner-menu .main-menu ul li a {
     color: #ffffff;
+}
+
+header.innner-menu .main-menu li:hover a {
+    color: #98deed;
 }
 
 header.innner-menu ul.slimmenu li.active span.sub-toggle i,
@@ -1146,14 +1149,11 @@ header.innner-menu #mainNav.affix {
         font-size: 60px;
         line-height: 60px;
     }
-
-    .stratos-methodology h2 .science{
+    .stratos-methodology h2 .science {
         font-size: 60px;
         line-height: 60px;
         letter-spacing: 1.5px;
     }
-
-
     .stratos-methodology {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -1730,7 +1730,7 @@ header.innner-menu #mainNav.affix {
     background: #e3e3e3;
 }
 
-.solution-blurd h3{
+.solution-blurd h3 {
     letter-spacing: 0.5px;
 }
 
