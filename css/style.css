@@ -926,7 +926,7 @@ header.innner-menu #mainNav.affix {
     width: 100%;
     font-size: 18px;
     line-height: 26px;
-    padding-left: 20px;
+    padding-left: 0px;
 }
 
 .cotainbox {
@@ -964,8 +964,6 @@ header.innner-menu #mainNav.affix {
 
 .stratos-methodology p strong {
     max-width: 700px;
-    /*margin: 0 auto;
-    display: block;*/
 }
 
 .techniques {
