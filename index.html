@@ -101,7 +101,7 @@
                         <h2 class="wow fadeInDown">Elevate your brand to new heights</h2>
                         <p class="wow fadeInUp" data-wow-delay="0.2s">To thrive in the competitive agency world, you must deliver the goods, day in and day out. Northlich
                             has been doing that since 1949. We’ve created breakthrough work for clients in all major industries.
-                            Health care marketing has it's unique challenges, but that's where our talents really shine.
+                            Healthcare marketing has its unique challenges, but that's where our talents really shine.
                             <br>
                             <br> No other agency can match our combination of deep experience in the healthcare ecosphere along
                             with proven strategic insights and award-winning creativity. That’s what makes us the Lift Agency
@@ -125,12 +125,12 @@
 
                             <div class="tab-content wow fadeInUp">
                                 <div class="tab-pane active" id="1">
-                                    <p>Whether it's readership, recall or online eyeballs, Northlich know how helps you make
+                                    <p>Whether it's readership, recall or online eyeballs, Northlich know-how helps you make
                                         an impact with a wider audience.</p>
                                 </div>
                                 <div class="tab-pane" id="2">
                                     <p>You are under constant pressure to deliver results. Our track record proves the Northlich
-                                        team has the chops to deliver.</p>
+                                        team has the chops to produce.</p>
                                 </div>
                                 <div class="tab-pane" id="3">
                                     <p>At Northlich, return on investment is our first consideration. We approach your organization’s
@@ -161,7 +161,7 @@
                                 <strong>say</strong> they’ll do, but what they <strong>actually</strong> do. Each step in our process is informed by a national consumer database representing
                                 99.9% of U.S. consumers and their spending habits and preferences. This comprehensive source
                                 reveals purchase history, lifestyle data, areas of interest and health data. The result is
-                                an elevated, more informed understanding of the people you need toreach coupled with the
+                                an elevated, more informed understanding of the people you need to reach coupled with the
                                 ability to apply predictive analytics and evolved targeting solutions. Net: an enhanced ability
                                 to
                                 <strong>create content</strong> and
@@ -385,81 +385,19 @@
     </script>
 
     <script>
-        $(window).scroll(example);
-
-        function example() {
-            var tempScrollTop = $(window).scrollTop();
-
-            //Scrolling through Elevate-Section animation
-            if (tempScrollTop <= 450) {
-                $('#awareness').addClass('active');
-                $('#1').addClass('active');
-            } else if (tempScrollTop > 450) {
-                $('#awareness').removeClass('active');
-                $('#1').removeClass('active');
-            }
-
-            if (tempScrollTop > 450 && tempScrollTop <= 635) {
-                $('#results').addClass('active');
-                $('#2').addClass('active');
-            } else if (tempScrollTop <= 450 || tempScrollTop > 635) {
-                $('#results').removeClass('active');
-                $('#2').removeClass('active');
-            }
-
-            if (tempScrollTop >= 635) {
-                $('#roi').addClass('active');
-                $('#3').addClass('active');
-            } else if (tempScrollTop < 635) {
-                $('#roi').removeClass('active');
-                $('#3').removeClass('active');
-            }
-
-
-            //Scrolling through Techniques-Section animation
-            if (tempScrollTop <= 1875) {
-                $('.techniques #branding').addClass('active');
-            } else if (tempScrollTop > 1875) {
-                $('.techniques #branding').removeClass('active');
-            }
-
-            if (tempScrollTop > 1875 && tempScrollTop <= 2000) {
-                $('.techniques #campaign').addClass('active');
-            } else if (tempScrollTop <= 1875 || tempScrollTop > 2000) {
-                $('.techniques #campaign').removeClass('active');
-            }
-
-            if (tempScrollTop >= 2000) {
-                $('.techniques #social').addClass('active');
-            } else if (tempScrollTop < 2000) {
-                $('.techniques #social').removeClass('active');
-            }
-        };
-    </script>
-
-    <script>
-        // Changes Techniques that Lift highlights from any of the Case Study pages
-        function seperatePageMenuChange() {
-            if (localStorage.getItem("storageName") === "branding"){
-                window.scrollTo(0,1795);
-                localStorage.clear();
-            } else if (localStorage.getItem("storageName") === "campaign") {
-                window.scrollTo(0, 1900);
-                localStorage.clear();
-            } else if (localStorage.getItem("storageName") === "social") {
-                window.scrollTo(0, 2005);
-                localStorage.clear();
-            }
-        }
-        window.onload = seperatePageMenuChange;
-    </script>
-
-    <script>
+        var clicked = null;
         $(document).ready(function() {
             $('.slimmenu li a').on('click', function() {
+                clicked = true;     //Variable used to stop the scrollTop() from being calculated
                 var sectionID1 = $(this).attr("id");
+
                 $("#example li").not("#" + sectionID1).removeClass("active");
                 $("#example").find('li[id="' + sectionID1 + '"]').addClass("active");
+
+                //Pause the clicked = false for 1.5s to give the animation time to execute
+                setTimeout(function () {
+                    clicked = false;
+                }, 1500);
             });
         });
     </script>
@@ -579,6 +517,80 @@
             kapow();
 
         });
+    </script>
+
+    <script>
+        $(window).scroll(scrollCalc);
+
+        function scrollCalc() {
+            var tempScrollTop = $(window).scrollTop();
+
+            if (clicked == true) {
+                //Do nothing
+            } else {
+                //Scrolling through Elevate-Section animation
+                if (tempScrollTop <= 450) {
+                    $('#awareness').addClass('active');
+                    $('#1').addClass('active');
+                } else if (tempScrollTop > 450) {
+                    $('#awareness').removeClass('active');
+                    $('#1').removeClass('active');
+                }
+
+                if (tempScrollTop > 450 && tempScrollTop <= 635) {
+                    $('#results').addClass('active');
+                    $('#2').addClass('active');
+                } else if (tempScrollTop <= 450 || tempScrollTop > 635) {
+                    $('#results').removeClass('active');
+                    $('#2').removeClass('active');
+                }
+
+                if (tempScrollTop >= 635) {
+                    $('#roi').addClass('active');
+                    $('#3').addClass('active');
+                } else if (tempScrollTop < 635) {
+                    $('#roi').removeClass('active');
+                    $('#3').removeClass('active');
+                }
+
+
+                //Scrolling through Techniques-Section animation
+                if (tempScrollTop <= 1850) {
+                    $('.techniques #branding').addClass('active');
+                } else if (tempScrollTop > 1850) {
+                    $('.techniques #branding').removeClass('active');
+                }
+
+                if (tempScrollTop > 1850 && tempScrollTop <= 2000) {
+                    $('.techniques #campaign').addClass('active');
+                } else if (tempScrollTop <= 1850 || tempScrollTop > 2000) {
+                    $('.techniques #campaign').removeClass('active');
+                }
+
+                if (tempScrollTop >= 2000) {
+                    $('.techniques #social').addClass('active');
+                } else if (tempScrollTop < 2000) {
+                    $('.techniques #social').removeClass('active');
+                }
+            }
+        };
+    </script>
+    
+    <script>
+            // Changes Techniques that Lift highlights from any of the Case Study pages
+            function seperatePageMenuChange() {
+                if (localStorage.getItem("storageName") === "branding") {
+                    window.scrollTo(0, 1795);
+                    localStorage.clear();
+                } else if (localStorage.getItem("storageName") === "campaign") {
+                    window.scrollTo(0, 1900);
+                    localStorage.clear();
+                } else if (localStorage.getItem("storageName") === "social") {
+                    window.scrollTo(0, 2005);
+                    localStorage.clear();
+                }
+            }
+            window.onload = seperatePageMenuChange;
     </script>
 
 </body>
